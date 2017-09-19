@@ -7,7 +7,18 @@
 </head>
 <body>
 
+	<nav class="navbar navbar-fixed-top">
+	  	<p class="navbar-brand">Chatty!</p>
+	  	<form class="navbar-form navbar-left">
+	  	<div class="form-group contianer-fluid">
+	  		<input type="text" id="message-input" class="form-control" placeholder="Type Message - press Return Key to post">
+	  		<button type="button" id="clear-messages" class="btn btn-default">Clear Messages</button>
+	  		<button type="button" id="theme-button" class="btn btn-default">Change Theme</button>
+	  	</div>
+	  </form>
+	 </nav>
 
+	 <div id="message-board" class="container"></div>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.js"
 	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
