@@ -2,10 +2,17 @@
 
 let domString = require("./dom");
 
+let messageData = [];
 //loads messages and writes it to the dom
 const messageLoad = function () {
-  let messageData = JSON.parse(this.responseText).messages;
-  domString.domString(messageData);
+
+	messageData = JSON.parse(this.responseText).messages;
+	domString.domString(messageData);
+
+};
+
+const getMessages = () => {
+	return messageData;
 };
 
 const messageError = function () {
@@ -36,4 +43,4 @@ messageRequest.send();
 // catRequest.open("GET", "cats.json");
 // catRequest.send();
 
-module.exports = { messageLoad, messageError };
+module.exports = { messageLoad, messageError, getMessages };

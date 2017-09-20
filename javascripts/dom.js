@@ -1,14 +1,17 @@
 "use strict";
 
-let loadedFiles = require("./xhr");
-
+const loadedFiles = require("./xhr");
+const deleteMessages = require("./deleteMessages");
 
 const domString = function (messages) {
+
+  deleteMessages.checkClearBtn(messages);
+  
   var messageString = "";
   for (var i = 0; i < messages.length; i++) {
     messageString += `<div class="messageCard">
                         ${messages[i].message}
-                        <button id="deleteBtn">Delete</button>
+                        <button class="deleteBtn">Delete</button>
 									    </div > `;
     writeToDom(messageString);
   }
