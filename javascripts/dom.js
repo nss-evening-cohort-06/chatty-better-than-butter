@@ -1,14 +1,13 @@
 "use strict";
 
-let loadedFiles = require("./xhr");
-
+let messages = require("./xhr");
 
 const domString = function (messages) {
   var messageString = "";
   for (var i = 0; i < messages.length; i++) {
     messageString += `<div class="messageCard">
-                        ${messages[i].message}
-                        <button id="deleteBtn">Delete</button>
+                        <p id="message">${messages[i].message}</p>
+                        <button class="deleteBtn">Delete</button>
 									    </div > `;
     writeToDom(messageString);
   }

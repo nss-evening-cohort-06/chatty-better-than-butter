@@ -2,10 +2,24 @@
 
 let domString = require("./dom");
 
+
+let messageData = [];
+
+let messageDelete = function (message) {
+  for (let i = 0; i < messageData.length; i++) {
+    if (messageData[i].message.indexOf(message) > -1) {
+      console.log("message", message);
+      messageData.splice(i, 1);
+    }
+  }
+  domString.domString(messageData);
+};
+
 //loads messages and writes it to the dom
 const messageLoad = function () {
-  let messageData = JSON.parse(this.responseText).messages;
+  messageData = JSON.parse(this.responseText).messages;
   domString.domString(messageData);
+  return messageData;
 };
 
 const messageError = function () {
@@ -36,4 +50,4 @@ messageRequest.send();
 // catRequest.open("GET", "cats.json");
 // catRequest.send();
 
-module.exports = { messageLoad, messageError };
+module.exports = { messageLoad, messageError, messageDelete };
