@@ -2,9 +2,11 @@
 
 let domString = require("./dom");
 
-
 let messageData = [];
 
+//when delete button is clicked, function loops through the messageData array 
+//if that clicked deleteBtn parentNode message matches a message in the array
+//it deletes that message from the array
 let messageDelete = function (message) {
   for (let i = 0; i < messageData.length; i++) {
     if (messageData[i].message.indexOf(message) > -1) {
@@ -27,7 +29,7 @@ const messageError = function () {
 };
 
 //message json request
-var messageRequest = new XMLHttpRequest();
+const messageRequest = new XMLHttpRequest();
 messageRequest.addEventListener("load", messageLoad);
 messageRequest.addEventListener("error", messageError);
 messageRequest.open("GET", "../data/preloaded.json");
