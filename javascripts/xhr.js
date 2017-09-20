@@ -1,6 +1,6 @@
 "use strict";
 
-let domString = require("./dom");
+let dom = require("./dom");
 
 let messageData = [];
 
@@ -14,14 +14,17 @@ let messageDelete = function (message) {
       messageData.splice(i, 1);
     }
   }
-  domString.domString(messageData);
+  dom.domString(messageData);
 };
 
 //loads messages and writes it to the dom
 const messageLoad = function () {
   messageData = JSON.parse(this.responseText).messages;
-  domString.domString(messageData);
-  return messageData;
+  dom.domString(messageData);
+};
+
+const getMessage = () => {
+	return messageData;
 };
 
 const messageError = function () {
@@ -52,8 +55,4 @@ messageRequest.send();
 // catRequest.open("GET", "cats.json");
 // catRequest.send();
 
-<<<<<<< HEAD
-module.exports = { messageLoad, messageError, getMessages };
-=======
-module.exports = { messageLoad, messageError, messageDelete };
->>>>>>> master
+module.exports = { messageLoad, messageError, messageDelete, getMessage };

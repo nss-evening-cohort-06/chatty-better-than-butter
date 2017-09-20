@@ -21,12 +21,12 @@ const checkClearBtn = (messageArray) => {
 const clearAll = () => {
 
 // function tied to click event in Events.js when clearBtn is selected...
-
+		console.log(event);
 // Empty chat container
-	// DomString = "";
+	DomString = "";
 
 // AND array becomes empty
-	// array = [];
+	messageArray = [];
 
 // Then reruns domstring function
 // OR just runs the checkClearBtn function

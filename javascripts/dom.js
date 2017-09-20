@@ -1,12 +1,10 @@
 "use strict";
 
 const deleteMessages = require("./deleteMessages");
-let messages = require("./xhr");
+
 
 
 const domString = function (messages) {
-
-  deleteMessages.checkClearBtn(messages);
   
   var messageString = "";
   for (var i = 0; i < messages.length; i++) {
@@ -23,4 +21,4 @@ const writeToDom = function (strang) {
   messageContainer.innerHTML = strang;
 };
 
-module.exports = { domString, writeToDom };
+module.exports = {domString, writeToDom };
