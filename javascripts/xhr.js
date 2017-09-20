@@ -3,9 +3,11 @@
 let domString = require("./dom");
 
 //loads messages and writes it to the dom
+let messageData = [];
 const messageLoad = function () {
-  let messageData = JSON.parse(this.responseText).messages;
+  messageData = JSON.parse(this.responseText).messages;
   domString.domString(messageData);
+  return messageData;
 };
 
 const messageError = function () {
