@@ -1,17 +1,42 @@
 body { 
-	padding-top: 45px; 
+	padding-top: 80px; 	
+}
+
+nav {
+	padding: 20px 20px 30px;
+	background-image: url("http://moziru.com/images/green-clipart-speech-bubble-17.png");
+	background-position: 5.5% 67%;
+	background-size: 200px 90px;
+    background-repeat: no-repeat;
+}
+
+.navbar-brand {
+  	padding-right: 0;	
+  	padding-left: 60px;
+  	font-family: 'Shrikhand', cursive;
+	font-size: 3em;
+	color: #606060;
+	font-size: 3em;
+}
+
+.navbar-form {
+	padding-left: 50px;
 }
 
 #message-input {
 	min-width: 50vw;
 }
 
+
+/*****MESSAGE BOARD STYLING*****/
+
 #message-board {
   width: 90%;
-  padding: 2% 3% 2% 0;
+  padding: 24px;
   margin: 2em auto;
   height: 80vh;
   overflow-x: hidden;
   overflow-y: scroll;
   border: 2px solid lightgray;
+  font-family: 'Roboto', sans-serif;
 }
