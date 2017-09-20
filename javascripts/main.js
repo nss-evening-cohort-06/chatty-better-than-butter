@@ -1,3 +1,8 @@
 "use strict";
 
-let loadFiles = require("./xhr");
+let messages = require("./xhr");
+
+let events = require("./events");
+
+let domString = require("./dom");
+
