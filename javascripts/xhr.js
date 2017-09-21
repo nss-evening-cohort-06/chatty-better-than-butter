@@ -1,10 +1,11 @@
 "use strict";
 
 let dom = require("./dom");
-
 let messageData = [];
 
-//when delete button is clicked, function loops through the messageData array 
+const clearBtn = document.getElementById("clear-messages");
+
+//when delete button is clicked, function loops through the messageData array
 //if that clicked deleteBtn parentNode message matches a message in the array
 //it deletes that message from the array
 let messageDelete = function (message) {
@@ -15,15 +16,39 @@ let messageDelete = function (message) {
     }
   }
   dom.domString(messageData);
+  checkClearBtn(messageData);
+};
+
+// after every change in the dom run this to see if the clearBtn needs to be enabled or disabled...
+const checkClearBtn = (messageArray) => {
+	// Checks the array passed to it, if it's empty, give the clear button the attribute 'disabled' and the value 'disabled' along with it, so it's unclickable
+	if (messageArray.length === 0) {
+		clearBtn.setAttribute("disabled", "disabled");
+	} else if (messageArray.length > 0) {
+		clearBtn.removeAttribute("disabled");
+	}
+};
+
+
+const clearAll = () => {
+// function tied to click event in Events.js when clearBtn is selected...
+	messageData = [];
+	document.getElementById("message-board").innerHTML = "";
+	dom.domString(messageData);
+ 	checkClearBtn(messageData);
+};
+
+// push newly entered text from input into message array
+let newMessage = (text) => {
+  messageData.push({"message": text});
+  dom.domString(messageData);
+ 	checkClearBtn(messageData);
 };
 
 //loads messages and writes it to the dom
 const messageLoad = function () {
   messageData = JSON.parse(this.responseText).messages;
   dom.domString(messageData);
-};
-
-const getMessage = () => {
 	return messageData;
 };
 
@@ -55,4 +80,4 @@ messageRequest.send();
 // catRequest.open("GET", "cats.json");
 // catRequest.send();
 
-module.exports = { messageLoad, messageError, messageDelete, getMessage };
+module.exports = { messageLoad, messageError, messageDelete, newMessage, messageData, checkClearBtn, clearAll };

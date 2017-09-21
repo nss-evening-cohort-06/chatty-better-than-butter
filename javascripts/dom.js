@@ -1,11 +1,10 @@
 "use strict";
 
-const deleteMessages = require("./deleteMessages");
+let xhr = require("./xhr");
 
 
+const domString = (messages) => {
 
-const domString = function (messages) {
-  
   var messageString = "";
   for (var i = 0; i < messages.length; i++) {
     messageString += `<div class="messageCard">
@@ -16,9 +15,9 @@ const domString = function (messages) {
   }
 };
 
-const writeToDom = function (strang) {
+const writeToDom = (strang) => {
   var messageContainer = document.getElementById("message-board");
   messageContainer.innerHTML = strang;
 };
 
-module.exports = {domString, writeToDom };
+module.exports = { domString, writeToDom };
