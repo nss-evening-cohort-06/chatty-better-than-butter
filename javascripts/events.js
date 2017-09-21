@@ -2,9 +2,11 @@
 
 let messages = require("./xhr");
 
-let messageBoard = document.getElementById("message-board");
-let input = document.getElementById("message-input");
-let clearBtn = document.getElementById("clear-messages");
+const messageBoard = document.getElementById("message-board");
+const themeRadios = document.getElementById("radioThemes");
+const body = document.getElementById("body");
+const input = document.getElementById("message-input");
+const clearBtn = document.getElementById("clear-messages");
 
 //deleteBtn when clicked will find the parent "messageCard" and delete it.
 messageBoard.addEventListener("click", (event) => {
@@ -24,6 +26,16 @@ clearBtn.addEventListener("click", () => {
 	messages.clearAll();
 });
 
+//loops through radio buttons and removes css class to add different css class
+themeRadios.addEventListener("change", (event) => {
+  for (let i = 0; i < themeRadios.children.length; i++) {
+    if (event.target.id === "bob") {
+      body.classList.remove("red");
+      body.classList.add("changeBackground");
+    }
+  }
+});
+
 // event listener for input field
 input.focus();
 input.addEventListener('keydown', (e) => {
@@ -36,3 +48,4 @@ input.addEventListener('keydown', (e) => {
     }
 	}
 });
+
