@@ -1,10 +1,10 @@
 "use strict";
 
 let domString = require("./dom");
-
 let messageData = [];
 
-//when delete button is clicked, function loops through the messageData array 
+
+//when delete button is clicked, function loops through the messageData array
 //if that clicked deleteBtn parentNode message matches a message in the array
 //it deletes that message from the array
 let messageDelete = function (message) {
@@ -17,10 +17,17 @@ let messageDelete = function (message) {
   domString.domString(messageData);
 };
 
+// push newly entered text from input into message array
+let newMessage = (text) => {
+  messageData.push({"message": text});
+  domString.domString(messageData);
+};
+
 //loads messages and writes it to the dom
 const messageLoad = function () {
   messageData = JSON.parse(this.responseText).messages;
   domString.domString(messageData);
+  console.log("original message data", messageData);
   return messageData;
 };
 
@@ -52,4 +59,4 @@ messageRequest.send();
 // catRequest.open("GET", "cats.json");
 // catRequest.send();
 
-module.exports = { messageLoad, messageError, messageDelete };
+module.exports = { messageLoad, messageError, messageDelete, newMessage };

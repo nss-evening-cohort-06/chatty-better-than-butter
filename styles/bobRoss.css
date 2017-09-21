@@ -1,0 +1,77 @@
+/*All colors are from the Bob Ross CSS collection... https://thomaspark.co/2015/11/bob-ross-color-palette-in-css/*/
+
+body { 
+	padding-top: 80px; 
+  font-family: 'Vibur', cursive;	
+  background-image: url("http://artist.com/art-recognition-and-education/wp-content/themes/artist-blog/media-files/2016/04/mountains-7.jpg");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+nav {
+	padding: 20px 20px 30px;
+	background-image: url("https://static.giantbomb.com/uploads/scale_small/16/164924/2936747-0816877525-Bob_R.gif");
+	background-position: top left;
+	background-size: 175px 90px;
+    background-repeat: no-repeat;
+}
+
+.navbar-brand {
+  	padding-right: 0;	
+  	padding-left: 150px; 	
+	font-size: 4.5em;
+	color: #5F2E1F; /*Dark Sienna*/
+}
+
+.navbar-form {
+	padding-left: 5px;
+  align-content: right;
+}
+
+#message-input {
+	min-width: 50vw;
+  height: 40px;
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  color: #C79B00;  /*Yellow Ochre*/
+  font-size: 18px;
+  background: #4E1500;  /*Alizarin Crimson*/
+  padding: 10px 20px 10px 20px;
+  border: solid #FFEC00 1px; /*Cadmium Yellow*/
+  text-decoration: none;
+}
+
+.btn {
+  height: 40px;
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  color: #C79B00; /*Yellow Ochre*/
+  font-size: 18px;
+  background: #4E1500; /*Alizarin Crimson*/
+  padding: 10px 20px 10px 20px;
+  border: solid #FFEC00 1px; /*Cadmium Yellow*/
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #DB0000; /*Bright Red*/
+  text-decoration: none;
+}
+
+
+/*****MESSAGE BOARD STYLING*****/
+
+#message-board {
+  width: 90%;
+  padding: 24px;
+  margin: 2em auto;
+  height: 80vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border: 2px solid #FFEC00;
+  background-color: rgba(16, 46, 60, 0.8); /*Prussian Blue*/
+  color: #FFB800; /*Indian Yellow*/
+}
