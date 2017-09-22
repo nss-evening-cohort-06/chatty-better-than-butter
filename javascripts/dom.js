@@ -1,8 +1,10 @@
 "use strict";
 
-let messages = require("./xhr");
+let xhr = require("./xhr");
 
-const domString = function (messages) {
+
+const domString = (messages) => {
+
   var messageString = "";
   for (var i = 0; i < messages.length; i++) {
     messageString += `<div class="messageCard">
@@ -13,7 +15,7 @@ const domString = function (messages) {
   }
 };
 
-const writeToDom = function (strang) {
+const writeToDom = (strang) => {
   var messageContainer = document.getElementById("message-board");
   messageContainer.innerHTML = strang;
 };
