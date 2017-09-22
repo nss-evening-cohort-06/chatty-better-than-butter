@@ -22,7 +22,9 @@ const writeToDom = function (strang) {
 };
 
 
-catBtn.addEventListener("click", writeToDom());
+catBtn.addEventListener("click", (event) => {
+  console.log(catData);
+});
 
 
 // Loads cat.json and writes it to the dom

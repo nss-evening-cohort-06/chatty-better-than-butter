@@ -1,24 +1,24 @@
 body { 
   padding-top: 80px; 
-  background-image: url("https://media.giphy.com/media/l2JJDdD7cv4xdGGis/giphy.gif");	
-  background-repeat: repeat;
+  background-image: url("https://i.pinimg.com/originals/f3/96/68/f3966861ae11e14f3f51ddbd62b37e4c.gif");	
+  background-size: cover;
 }
 
 nav {
 	padding: 20px 20px 30px;
-	background-image: url("http://moziru.com/images/green-clipart-speech-bubble-17.png");
+	background-image: url("https://i.imgur.com/uKl6bv4.png");
 	background-position: 5.5% 67%;
-	background-size: 200px 90px;
+	background-size: 325px 125px;
   background-repeat: no-repeat;
 }
 
 .navbar-brand {
   padding-right: 0;	
-  padding-left: 60px;
-  font-family: 'Shrikhand', cursive;
-	font-size: 3em;
-	color: #606060;
-	font-size: 3em;
+  padding-left: 196px;
+  padding-top: 38px;
+  font-family: 'Schoolbell', cursive;
+	font-size: 18px;
+	color: white; 
 }
 
 .navbar-form {
@@ -29,6 +29,20 @@ nav {
 	min-width: 50vw;
 }
 
+
+.cat-clear, .cat-theme {
+  background-image: url("https://littlecaesars.com/Portals/0/img/Promos/EMB/Mobile/Home_PizzaButton_Background_EMB_MobileSite.jpg");
+  color: white;
+  font-size: 20px;
+  text-shadow: 2px 2px black;
+}
+
+.cat-random {
+  background-image: url("https://i.pinimg.com/originals/e6/bd/a2/e6bda29991dbb0702fabc85df2da791c.png");
+  color: white;
+  font-size: 20px;
+  text-shadow: 2px 2px black;
+}
 
 #cat-button {
   text-align: center;
@@ -45,20 +59,20 @@ nav {
   height: 80vh;
   overflow-x: hidden;
   overflow-y: scroll;
-  border: 3px solid gold;
+  border: 3px solid white;
   font-family: 'Roboto', sans-serif;
  
 }
 
 /*div to overlay messageboard for opacity*/
 .cat-container {
-  opacity: 0.9;
+  opacity: 0.7;
   width: 90%;
   padding: 24px;
   margin: 2em auto;
   height: 80vh;
   overflow-x: hidden;
   overflow-y: scroll;
-  border: 3px solid gold;
+  border: 3px solid white;
  z-index: 1;
 }
