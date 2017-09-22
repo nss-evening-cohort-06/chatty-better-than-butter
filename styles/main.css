@@ -2,14 +2,6 @@ body {
 	padding-top: 80px; 	
 }
 
-.red {
-	background-color: red;
-}
-
-.changeBackground {
-	background-color:blue;
-}
-
 nav {
 	padding: 20px 20px 30px;
 	background-image: url("http://moziru.com/images/green-clipart-speech-bubble-17.png");
@@ -47,4 +39,9 @@ nav {
   overflow-y: scroll;
   border: 2px solid lightgray;
   font-family: 'Roboto', sans-serif;
+}
+
+/*hides cat randomize button on main page*/
+.hidden-cat {
+	display: none;
 }

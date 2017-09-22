@@ -1,21 +1,19 @@
 "use strict";
 
-let messages = require("./xhr");
-
-const domString = function (messages) {
-  var messageString = "";
-  for (var i = 0; i < messages.length; i++) {
+const domString = (messages) => {
+  let messageString = "";
+  for (let i = 0; i < messages.length; i++) {
     messageString += `<div class="messageCard">
                         <p> ${messages[i].timeStamp} </p>
                         <p id="message">${messages[i].message}</p>
                         <button class="deleteBtn">Delete</button>
-									    </div > `;
-    writeToDom(messageString);
+									    </div > `;   
   }
+  writeToDom(messageString);
 };
 
-const writeToDom = function (strang) {
-  var messageContainer = document.getElementById("message-board");
+const writeToDom = (strang) => {
+  let messageContainer = document.getElementById("message-board");
   messageContainer.innerHTML = strang;
 };
 
