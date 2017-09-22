@@ -1,7 +1,11 @@
 "use strict";
 
-const domString = require("./dom");
+
+let dom = require("./dom");
 let messageData = [];
+
+const clearBtn = document.getElementById("clear-messages");
+
 
 //when delete button is clicked, function loops through the messageData array
 //if that clicked deleteBtn parentNode message matches a message in the array
@@ -12,20 +16,42 @@ const messageDelete = (message) => {
       messageData.splice(i, 1);
     }
   }
-  domString.domString(messageData);
+  dom.domString(messageData);
+  checkClearBtn(messageData);
+};
+
+// after every change in the dom run this to see if the clearBtn needs to be enabled or disabled...
+const checkClearBtn = (messageArray) => {
+	// Checks the array passed to it, if it's empty, give the clear button the attribute 'disabled' and the value 'disabled' along with it, so it's unclickable
+	if (messageArray.length === 0) {
+		clearBtn.setAttribute("disabled", "disabled");
+	} else if (messageArray.length > 0) {
+		clearBtn.removeAttribute("disabled");
+	}
+};
+
+
+const clearAll = () => {
+// function tied to click event in Events.js when clearBtn is selected...
+	messageData = [];
+	document.getElementById("message-board").innerHTML = "";
+	dom.domString(messageData);
+ 	checkClearBtn(messageData);
 };
 
 // push newly entered text from input into message array
-const newMessage = (text) => {
-  messageData.push({ "message": text });
-  domString.domString(messageData);
+
+let newMessage = (text) => {
+  messageData.push({"message": text});
+  dom.domString(messageData);
+ 	checkClearBtn(messageData);
 };
 
 //loads messages and writes it to the dom
 const messageLoad = function () {
   messageData = JSON.parse(this.responseText).messages;
-  domString.domString(messageData);
-  return messageData;
+  dom.domString(messageData);
+	return messageData;
 };
 
 const messageError = () => {
@@ -39,4 +65,24 @@ messageRequest.addEventListener("error", messageError);
 messageRequest.open("GET", "../data/preloaded.json");
 messageRequest.send();
 
-module.exports = { messageLoad, messageError, messageDelete, newMessage };
+
+
+//Loads cat.json and writes it to the dom
+// const catLoad = function () {
+//   var catData = JSON.parse(this.responseText).cats; //responseText gives you a string .parse turns it into JSON array
+//   domString(catData);
+// };
+
+// const catError = function () {
+//   console.log("Dis shit broke.");
+// };
+
+// //cat json request
+// var catRequest = new XMLHttpRequest();
+// catRequest.addEventListener("load", catLoad);
+// catRequest.addEventListener("error", catError);
+// catRequest.open("GET", "cats.json");
+// catRequest.send();
+
+module.exports = { messageLoad, messageError, messageDelete, newMessage, messageData, checkClearBtn, clearAll };
+
