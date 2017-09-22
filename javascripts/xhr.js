@@ -10,7 +10,6 @@ let messageData = [];
 let messageDelete = function (message) {
   for (let i = 0; i < messageData.length; i++) {
     if (messageData[i].message.indexOf(message) > -1) {
-      console.log("message", message);
       messageData.splice(i, 1);
     }
   }
