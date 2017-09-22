@@ -1,6 +1,14 @@
 "use strict";
 
+
+const domString = require("./dom");
+
+const themes = require("./themes");
+const pressEnter = require("./addMessages");
+const catty = require("./catty");
+
 let messages = require("./xhr");
+
 
 const messageBoard = document.getElementById("message-board");
 const themeRadios = document.getElementById("radioThemes");
@@ -10,8 +18,9 @@ const clearBtn = document.getElementById("clear-messages");
 
 //deleteBtn when clicked will find the parent "messageCard" and delete it.
 messageBoard.addEventListener("click", (event) => {
-  messages.messageDelete(event.target.parentNode.children[0].innerHTML);
-  // console.log(event.target.parentNode.children[0].innerHTML);
+  if (event.target.className === "deleteBtn") {
+    messages.messageDelete(event.target.parentNode.children[0].innerHTML);
+  }
 });
 
 
@@ -30,8 +39,7 @@ clearBtn.addEventListener("click", () => {
 themeRadios.addEventListener("change", (event) => {
   for (let i = 0; i < themeRadios.children.length; i++) {
     if (event.target.id === "bob") {
-      body.classList.remove("red");
-      body.classList.add("changeBackground");
+      document.querySelector("link[href='styles/main.css']").href = "styles/bobRoss.css";
     }
   }
 });
@@ -39,13 +47,13 @@ themeRadios.addEventListener("change", (event) => {
 // event listener for input field
 input.focus();
 input.addEventListener('keydown', (e) => {
-	if(event.target.tagName != 'TEXTAREA') {
-		if (e.keyCode === 13) {
-			event.preventDefault();
+  if (event.target.tagName != 'TEXTAREA') {
+    if (e.keyCode === 13) {
+      event.preventDefault();
       messages.newMessage(input.value);
-			input.value = "";
-			return false;
+      input.value = "";
+      return false;
     }
-	}
+  }
 });
 
