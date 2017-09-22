@@ -6,7 +6,7 @@ const domString = (messages) => {
     messageString += `<div class="messageCard">
                         <p>${messages[i].message}</p>
                         <button class="deleteBtn">Delete</button>
-									    </div > `;   
+									    </div > `;
   }
   writeToDom(messageString);
 };
