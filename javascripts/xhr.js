@@ -17,9 +17,13 @@ let messageDelete = function (message) {
   domString.domString(messageData);
 };
 
+  var messageString = "";
+
+
 // push newly entered text from input into message array
 let newMessage = (text) => {
-  messageData.push({"message": text});
+  let timeStamp = new Date();
+  messageData.push({timeStamp, "message": text});
   domString.domString(messageData);
 };
 

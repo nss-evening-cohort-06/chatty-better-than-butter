@@ -6,6 +6,7 @@ const domString = function (messages) {
   var messageString = "";
   for (var i = 0; i < messages.length; i++) {
     messageString += `<div class="messageCard">
+                        <p> ${messages[i].timeStamp} </p>
                         <p id="message">${messages[i].message}</p>
                         <button class="deleteBtn">Delete</button>
 									    </div > `;
