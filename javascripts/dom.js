@@ -12,9 +12,9 @@ const domString = (messages) => {
     messageString += `<div class="messageCard" id="messageCard">
                         <p>${messages[i].message}</p>
                         <button class="deleteBtn">Delete</button>
-									    </div > `;
-    writeToDom(messageString);
+									    </div > `;   
   }
+  writeToDom(messageString);
 };
 
 const writeToDom = (strang) => {
