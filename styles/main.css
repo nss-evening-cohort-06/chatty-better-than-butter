@@ -27,7 +27,9 @@ nav {
 	min-width: 50vw;
 }
 
-
+.hidden-cat {
+	display: none;
+}
 /*****MESSAGE BOARD STYLING*****/
 
 #message-board {

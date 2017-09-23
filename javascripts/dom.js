@@ -7,7 +7,7 @@ const domString = (messages) => {
                         <p> ${messages[i].timeStamp} </p>
                         <p id="message">${messages[i].message}</p>
                         <button class="deleteBtn">Delete</button>
-									    </div > `;   
+									    </div > `;
   }
   writeToDom(messageString);
 };
