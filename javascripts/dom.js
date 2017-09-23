@@ -1,5 +1,7 @@
 "use strict";
 
+const emoji = require('./emoji');
+
 const domString = (messages) => {
   let messageString = "";
   for (let i = 0; i < messages.length; i++) {
@@ -9,6 +11,7 @@ const domString = (messages) => {
                         <button class="deleteBtn">Delete</button>
 									    </div > `;
   }
+  messageString = emoji.parseEmoji(messageString);
   writeToDom(messageString);
 };
 
