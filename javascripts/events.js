@@ -1,9 +1,5 @@
 "use strict";
 
-const domString = require("./dom");
-const themes = require("./themes");
-const pressEnter = require("./addMessages");
-const catty = require("./catty");
 const messages = require("./xhr");
 
 const messageBoard = document.getElementById("message-board");
