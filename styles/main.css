@@ -27,10 +27,11 @@ nav {
 	min-width: 50vw;
 }
 
-.hidden-cat {
-	display: none;
-}
 /*****MESSAGE BOARD STYLING*****/
+
+body {
+	background-color: antiquewhite;
+}
 
 #message-board {
   width: 90%;
@@ -40,8 +41,29 @@ nav {
   overflow-x: hidden;
   overflow-y: scroll;
   border: 2px solid lightgray;
+	border-radius: 10px;
+	background-color: white;
   font-family: 'Roboto', sans-serif;
 }
+
+.messageCard {
+	margin: 7px auto;
+	padding: 10px;
+	border-radius: 5px;
+	border: 2px solid #606060;
+	box-shadow: 2px 2px 5px #888888;
+	background-color: whitesmoke;
+}
+
+.timestamp {
+	font-size: 10px;
+}
+
+.deleteBtn {
+	display: inline-block;
+	font-size: 10px;
+}
+
 
 /*hides cat randomize button on main page*/
 .hidden-cat {
