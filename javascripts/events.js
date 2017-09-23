@@ -15,7 +15,7 @@ const clearBtn = document.getElementById("clear-messages");
 //deleteBtn when clicked will find the parent "messageCard" and delete it.
 messageBoard.addEventListener("click", (event) => {
   if (event.target.className === "deleteBtn") {
-    messages.messageDelete(event.target.parentNode.children[0].innerHTML);
+    messages.messageDelete(event.target.parentNode.children[1].innerHTML);
   }
 });
 
