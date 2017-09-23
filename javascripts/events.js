@@ -1,21 +1,24 @@
 "use strict";
 
-const domString = require("./dom");
-const themes = require("./themes");
-const pressEnter = require("./addMessages");
-const catty = require("./catty");
-let messages = require("./xhr");
+const messages = require("./xhr");
 
 const messageBoard = document.getElementById("message-board");
 const themeRadios = document.getElementById("radioThemes");
 const body = document.getElementById("body");
 const input = document.getElementById("message-input");
 const clearBtn = document.getElementById("clear-messages");
+const stylesheets = {
+  bob: "styles/bobRoss.css",
+  catty: "styles/catty.css",
+  normal: "styles/main.css"
+};
+
 
 //deleteBtn when clicked will find the parent "messageCard" and delete it.
-messageBoard.addEventListener("click", (event) => {
-  if (event.target.className === "deleteBtn") {
-    messages.messageDelete(event.target.parentNode.children[0].innerHTML);
+
+messageBoard.addEventListener("click", (e) => {
+  if (e.target.className === "deleteBtn") {
+    messages.messageDelete(e.target.parentNode.children[0].innerHTML);
   }
 });
 
@@ -24,13 +27,9 @@ clearBtn.addEventListener("click", () => {
   messages.clearAll();
 });
 
-//loops through radio buttons and removes css class to add different css class
-themeRadios.addEventListener("change", (event) => {
-  for (let i = 0; i < themeRadios.children.length; i++) {
-    if (event.target.id === "bob") {
-      document.querySelector("link[href='styles/main.css']").href = "styles/bobRoss.css";
-    }
-  }
+//changes themes
+themeRadios.addEventListener("change", (e) => {
+  document.querySelector("link[data-active-stylesheet]").href = stylesheets[e.target.id];
 });
 
 // event listener for input field

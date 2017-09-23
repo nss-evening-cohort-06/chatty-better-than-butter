@@ -8,11 +8,13 @@ const clearBtn = document.getElementById("clear-messages");
 //if that clicked deleteBtn parentNode message matches a message in the array
 //it deletes that message from the array
 const messageDelete = (message) => {
+  console.log("message", message);
   for (let i = 0; i < messageData.length; i++) {
     if (messageData[i].message.indexOf(message) > -1) {
       messageData.splice(i, 1);
     }
   }
+  console.log("messageData", messageData);
   dom.domString(messageData);
   checkClearBtn(messageData);
 };
@@ -35,10 +37,14 @@ const clearAll = () => {
   checkClearBtn(messageData);
 };
 
+  var messageString = "";
+
+
 // push newly entered text from input into message array
 
 let newMessage = (text) => {
-  messageData.push({ "message": text });
+  let timeStamp = new Date();
+  messageData.push({"message": text, timeStamp});
   dom.domString(messageData);
   checkClearBtn(messageData);
 };
@@ -60,24 +66,6 @@ messageRequest.addEventListener("load", messageLoad);
 messageRequest.addEventListener("error", messageError);
 messageRequest.open("GET", "../data/preloaded.json");
 messageRequest.send();
-
-
-//Loads cat.json and writes it to the dom
-// const catLoad = function () {
-//   var catData = JSON.parse(this.responseText).cats; //responseText gives you a string .parse turns it into JSON array
-//   domString(catData);
-// };
-
-// const catError = function () {
-//   console.log("Dis shit broke.");
-// };
-
-// //cat json request
-// var catRequest = new XMLHttpRequest();
-// catRequest.addEventListener("load", catLoad);
-// catRequest.addEventListener("error", catError);
-// catRequest.open("GET", "cats.json");
-// catRequest.send();
 
 module.exports = { messageLoad, messageError, messageDelete, newMessage, messageData, checkClearBtn, clearAll };
 
