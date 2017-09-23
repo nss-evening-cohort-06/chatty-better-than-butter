@@ -17,8 +17,9 @@ const stylesheets = {
 //deleteBtn when clicked will find the parent "messageCard" and delete it.
 
 messageBoard.addEventListener("click", (e) => {
+	console.log("delete event", event);
   if (e.target.className === "deleteBtn") {
-    messages.messageDelete(e.target.parentNode.children[0].innerHTML);
+    messages.messageDelete(e.target.parentNode.children[1].innerHTML);
   }
 });
 
