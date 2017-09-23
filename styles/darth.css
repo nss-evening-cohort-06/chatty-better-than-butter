@@ -3,7 +3,7 @@ body {
   font-family: 'Source Code Pro', monospace;
   background-image: url("https://i2.wp.com/techlogitic.net/wp-content/uploads/2015/11/2553_star_wars-1024x576.jpg");
   background-position: center;
-  background-size: 100%;
+  background-size: 110%;
   background-repeat: no-repeat;
 }
 
@@ -29,8 +29,8 @@ nav {
 
 #message-input, .btn {
   height: 40px;
-  -webkit-border-radius: 5;
-  -moz-border-radius: 5;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
   font-size: 18px;
   padding: 6px 20px;
@@ -52,6 +52,10 @@ nav {
   text-decoration: none;
 }
 
+.btn.active, .btn:focus, .btn:active, .btn:active:focus, .btn.active:focus {
+    background-color: #C10D0D; /*Darth Red*/
+}
+
 /*****MESSAGE BOARD STYLING*****/
 
 #message-board {
@@ -63,7 +67,7 @@ nav {
   overflow-y: scroll;
 }
 
-
+/***** HIDE CAT BUTTON *****/
 
 .hidden-cat {
   display: none;
