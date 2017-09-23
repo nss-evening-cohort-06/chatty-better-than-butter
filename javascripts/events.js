@@ -1,25 +1,47 @@
 "use strict";
-let domString = require("./dom");
-let messages = require("./xhr");
-let pressEnter = require("./addMessages");
-let messageBoard = document.getElementById("message-board");
-let input = document.getElementById("message-input");
+
+const messages = require("./xhr");
+
+const messageBoard = document.getElementById("message-board");
+const themeRadios = document.getElementById("radioThemes");
+const body = document.getElementById("body");
+const input = document.getElementById("message-input");
+const clearBtn = document.getElementById("clear-messages");
+const stylesheets = {
+  bob: "styles/bobRoss.css",
+  catty: "styles/catty.css",
+  normal: "styles/main.css"
+};
+
 
 //deleteBtn when clicked will find the parent "messageCard" and delete it.
-messageBoard.addEventListener("click", (event) => {
-  messages.messageDelete(event.target.parentNode.children[0].innerHTML);
-  // console.log(event.target.parentNode.children[0].innerHTML);
+
+messageBoard.addEventListener("click", (e) => {
+  if (e.target.className === "deleteBtn") {
+    messages.messageDelete(e.target.parentNode.children[1].innerHTML);
+  }
+});
+
+// clicking the clearBtn runs clearAll, the function to empty the dom and the 'messageData' array
+clearBtn.addEventListener("click", () => {
+  messages.clearAll();
+});
+
+//changes themes
+themeRadios.addEventListener("change", (e) => {
+  document.querySelector("link[data-active-stylesheet]").href = stylesheets[e.target.id];
 });
 
 // event listener for input field
 input.focus();
 input.addEventListener('keydown', (e) => {
-	if(event.target.tagName != 'TEXTAREA') {
-		if (e.keyCode === 13) {
-			event.preventDefault();
+  if (event.target.tagName != 'TEXTAREA') {
+    if (e.keyCode === 13) {
+      event.preventDefault();
       messages.newMessage(input.value);
-			input.value = "";
-			return false;
+      input.value = "";
+      return false;
     }
-	}
+  }
 });
+

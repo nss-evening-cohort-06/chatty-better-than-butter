@@ -27,7 +27,9 @@ nav {
 	min-width: 50vw;
 }
 
-
+.hidden-cat {
+	display: none;
+}
 /*****MESSAGE BOARD STYLING*****/
 
 #message-board {
@@ -39,4 +41,9 @@ nav {
   overflow-y: scroll;
   border: 2px solid lightgray;
   font-family: 'Roboto', sans-serif;
+}
+
+/*hides cat randomize button on main page*/
+.hidden-cat {
+	display: none;
 }
