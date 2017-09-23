@@ -1,12 +1,13 @@
 "use strict";
 
 const dom = require("./dom");
-let messageData = [];
 const clearBtn = document.getElementById("clear-messages");
+let messageData = [];
 
 //when delete button is clicked, function loops through the messageData array
 //if that clicked deleteBtn parentNode message matches a message in the array
 //it deletes that message from the array
+
 const messageDelete = (timestamp) => {
   for (let i = 0; i < messageData.length; i++) {
     if (messageData[i].timeStamp === timestamp) {
@@ -42,10 +43,10 @@ const clearAll = () => {
   checkClearBtn(messageData);
 };
 
+
 var messageString = "";
 
 // push newly entered text from input into message array
-
 let newMessage = (text) => {
   let timeStamp = new Date();
   messageData.push({ "message": text, "timeStamp": `${timeStamp}` });

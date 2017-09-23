@@ -9,6 +9,8 @@ const clearBtn = document.getElementById("clear-messages");
 const stylesheets = {
   bob: "styles/bobRoss.css",
   catty: "styles/catty.css",
+  darth: "styles/darth.css",
+  magical: "styles/magical.css",
   normal: "styles/main.css"
 };
 
@@ -41,4 +43,3 @@ input.addEventListener('keydown', (e) => {
     }
   }
 });
-
