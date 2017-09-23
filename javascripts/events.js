@@ -17,7 +17,6 @@ messageBoard.addEventListener("click", (e) => {
   if (e.target.className === "deleteBtn") {
     messages.messageDelete(e.target.parentNode.children[0].innerHTML);
   }
-
 });
 
 // clicking the clearBtn runs clearAll, the function to empty the dom and the 'messageData' array

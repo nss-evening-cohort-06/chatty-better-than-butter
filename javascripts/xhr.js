@@ -8,7 +8,6 @@ const clearBtn = document.getElementById("clear-messages");
 //if that clicked deleteBtn parentNode message matches a message in the array
 //it deletes that message from the array
 const messageDelete = (timestamp) => {
-  console.log(messageData);
   for (let i = 0; i < messageData.length; i++) {
     if (messageData[i].timeStamp === timestamp) {
       messageData.splice(i, 1);
