@@ -15,8 +15,10 @@ const stylesheets = {
 //deleteBtn when clicked will find the parent "messageCard" and delete it.
 messageBoard.addEventListener("click", (e) => {
   if (e.target.className === "deleteBtn") {
+    console.log(e.target.parentNode.children[0].innerHTML);
     messages.messageDelete(e.target.parentNode.children[0].innerHTML);
   }
+
 });
 
 // clicking the clearBtn runs clearAll, the function to empty the dom and the 'messageData' array
