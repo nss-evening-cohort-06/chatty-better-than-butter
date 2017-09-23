@@ -28,7 +28,7 @@ clearBtn.addEventListener("click", () => {
 
 //changes themes
 themeRadios.addEventListener("change", (e) => {
-  document.querySelector("link[data-active-stylesheet]").href = stylesheets[event.target.id];
+  document.querySelector("link[data-active-stylesheet]").href = stylesheets[e.target.id];
 });
 
 // event listener for input field
