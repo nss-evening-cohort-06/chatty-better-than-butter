@@ -5,7 +5,10 @@
 	<title>Chatty!</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
 	 crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:900|Roboto|Shrikhand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Shrikhand" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Schoolbell" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 
@@ -18,8 +21,8 @@
 		<form class="navbar-form navbar-left">
 			<div class="form-group contianer-fluid">
 				<input type="text" id="message-input" class="form-control" placeholder="Type Message - press Return Key to post">
-				<button type="button" id="clear-messages" class="btn btn-default">Clear Messages</button>
-				<button type="button" class="btn btn-default" data-toggle="modal" id="theme-button" data-target="#myModal">Change Theme</button>
+				<button type="button" id="clear-messages" class="btn btn-default cat-clear">Clear Messages</button>
+				<button type="button" class="btn btn-default cat-theme" data-toggle="modal" id="theme-button" data-target="#myModal">Change Theme</button>
 			</div>
 		</form>
 	</nav>
@@ -68,7 +71,7 @@
 	<!-- *******CAT BUTTON******* -->
 
 	<div id="cat-button">
-		<button type="button" class="hidden-cat btn btn-default" id="catBtn">Randomize Me Kitty!</button>
+		<button type="button" class="hidden-cat btn btn-default cat-random" id="catBtn">Randomize Me Kitty!</button>
 	</div>
 
 	<!-- *******SCRIPT TAGS******* -->

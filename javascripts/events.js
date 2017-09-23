@@ -1,14 +1,10 @@
 "use strict";
 
-
 const domString = require("./dom");
-
 const themes = require("./themes");
 const pressEnter = require("./addMessages");
 const catty = require("./catty");
-
 let messages = require("./xhr");
-
 
 const messageBoard = document.getElementById("message-board");
 const themeRadios = document.getElementById("radioThemes");
@@ -23,16 +19,9 @@ messageBoard.addEventListener("click", (event) => {
   }
 });
 
-
-
-
-
-
-
-
 // clicking the clearBtn runs clearAll, the function to empty the dom and the 'messageData' array
 clearBtn.addEventListener("click", () => {
-	messages.clearAll();
+  messages.clearAll();
 });
 
 //loops through radio buttons and removes css class to add different css class

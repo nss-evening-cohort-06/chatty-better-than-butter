@@ -1,11 +1,8 @@
 "use strict";
 
-
-let dom = require("./dom");
+const dom = require("./dom");
 let messageData = [];
-
 const clearBtn = document.getElementById("clear-messages");
-
 
 //when delete button is clicked, function loops through the messageData array
 //if that clicked deleteBtn parentNode message matches a message in the array
@@ -22,36 +19,35 @@ const messageDelete = (message) => {
 
 // after every change in the dom run this to see if the clearBtn needs to be enabled or disabled...
 const checkClearBtn = (messageArray) => {
-	// Checks the array passed to it, if it's empty, give the clear button the attribute 'disabled' and the value 'disabled' along with it, so it's unclickable
-	if (messageArray.length === 0) {
-		clearBtn.setAttribute("disabled", "disabled");
-	} else if (messageArray.length > 0) {
-		clearBtn.removeAttribute("disabled");
-	}
+  // Checks the array passed to it, if it's empty, give the clear button the attribute 'disabled' and the value 'disabled' along with it, so it's unclickable
+  if (messageArray.length === 0) {
+    clearBtn.setAttribute("disabled", "disabled");
+  } else if (messageArray.length > 0) {
+    clearBtn.removeAttribute("disabled");
+  }
 };
 
-
 const clearAll = () => {
-// function tied to click event in Events.js when clearBtn is selected...
-	messageData = [];
-	document.getElementById("message-board").innerHTML = "";
-	dom.domString(messageData);
- 	checkClearBtn(messageData);
+  // function tied to click event in Events.js when clearBtn is selected...
+  messageData = [];
+  document.getElementById("message-board").innerHTML = "";
+  dom.domString(messageData);
+  checkClearBtn(messageData);
 };
 
 // push newly entered text from input into message array
 
 let newMessage = (text) => {
-  messageData.push({"message": text});
+  messageData.push({ "message": text });
   dom.domString(messageData);
- 	checkClearBtn(messageData);
+  checkClearBtn(messageData);
 };
 
 //loads messages and writes it to the dom
 const messageLoad = function () {
   messageData = JSON.parse(this.responseText).messages;
   dom.domString(messageData);
-	return messageData;
+  return messageData;
 };
 
 const messageError = () => {
@@ -64,7 +60,6 @@ messageRequest.addEventListener("load", messageLoad);
 messageRequest.addEventListener("error", messageError);
 messageRequest.open("GET", "../data/preloaded.json");
 messageRequest.send();
-
 
 
 //Loads cat.json and writes it to the dom
