@@ -62,3 +62,9 @@ nav {
   overflow-x: hidden;
   overflow-y: scroll;
 }
+
+
+
+.hidden-cat {
+  display: none;
+}
