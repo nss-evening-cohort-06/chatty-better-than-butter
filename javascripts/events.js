@@ -18,7 +18,7 @@ const stylesheets = {
 
 messageBoard.addEventListener("click", (e) => {
   if (e.target.className === "deleteBtn") {
-    messages.messageDelete(e.target.parentNode.children[0].innerHTML);
+    messages.messageDelete(e.target.parentNode.children[1].innerHTML);
   }
 });
 
