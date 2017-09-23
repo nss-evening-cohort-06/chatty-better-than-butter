@@ -1,0 +1,79 @@
+body {
+	padding-top: 80px;
+  font-family: fantasy;
+  background-image: url("http://www.absolutemadpromotions.com/wp-content/uploads/2017/08/modest-colorful-unicorn-pictures-42.jpg");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+nav {
+	padding: 20px 20px 30px;
+	background-image: url("https://vignette3.wikia.nocookie.net/powerlisting/images/2/20/Magic_wand.svg/revision/latest?cb=20130509210213");
+	background-position: top left;
+	background-size: 300px 90px;
+  background-repeat: no-repeat;
+}
+
+.navbar-brand {
+  padding-right: 0;
+  padding-left: 150px;
+  margin-top: 10px;
+	font-size: 4.5em;
+	color: #f442a1; /*Magenta*/
+}
+
+.navbar-form {
+	padding-left: 100px;
+  align-content: right;
+}
+
+#message-input {
+	min-width: 30vw;
+  height: 40px;
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  color: black;
+  font-size: 18px;
+  background: #f9a939;  /*Orange*/
+  padding: 10px 20px 10px 20px;
+  border: solid red 1px;
+  text-decoration: none;
+}
+
+.btn {
+  height: 40px;
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  color: black;
+  font-size: 18px;
+  background: #f9a939;  /*Orange*/
+  padding: 10px 20px 10px 20px;
+  border: solid red 1px;
+  text-decoration: none;
+}
+
+.hidden-cat {
+	display: none;
+}
+
+.btn:focus, .btn:hover {
+  background-color: #fc8805;
+}
+
+/*****MESSAGE BOARD STYLING*****/
+
+#message-board {
+  width: 90%;
+  padding: 24px;
+  margin: 2em auto;
+  height: 80vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border: 2px solid blue;
+  background-image: url("https://vignette2.wikia.nocookie.net/gallowshill/images/3/3d/Sparkles.png/revision/latest?cb=20140423143237");
+  background-color: rgba(229, 226, 218, 0.8);
+  color: black;
+}
