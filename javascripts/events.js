@@ -10,6 +10,7 @@ const clearBtn = document.getElementById("clear-messages");
 const stylesheets = {
   bob: "styles/bobRoss.css",
   catty: "styles/catty.css",
+  darth: "styles/darth.css",
   normal: "styles/main.css"
 };
 
