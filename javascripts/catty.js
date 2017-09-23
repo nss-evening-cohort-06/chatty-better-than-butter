@@ -33,4 +33,6 @@ const catXHR = () => {
   catRequest.open("GET", "../data/cats.json");
   catRequest.send();
 };
+
 module.exports = { catLoad, catError };
+
