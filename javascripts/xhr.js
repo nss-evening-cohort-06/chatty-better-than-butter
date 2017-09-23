@@ -8,13 +8,11 @@ const clearBtn = document.getElementById("clear-messages");
 //if that clicked deleteBtn parentNode message matches a message in the array
 //it deletes that message from the array
 const messageDelete = (message) => {
-  console.log("message", message);
   for (let i = 0; i < messageData.length; i++) {
     if (messageData[i].message.indexOf(message) > -1) {
       messageData.splice(i, 1);
     }
   }
-  console.log("messageData", messageData);
   dom.domString(messageData);
   checkClearBtn(messageData);
 };
@@ -37,14 +35,14 @@ const clearAll = () => {
   checkClearBtn(messageData);
 };
 
-  var messageString = "";
+var messageString = "";
 
 
 // push newly entered text from input into message array
 
 let newMessage = (text) => {
   let timeStamp = new Date();
-  messageData.push({"message": text, timeStamp});
+  messageData.push({ "message": text, timeStamp });
   dom.domString(messageData);
   checkClearBtn(messageData);
 };

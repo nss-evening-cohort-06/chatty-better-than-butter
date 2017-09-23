@@ -1,30 +1,40 @@
 "use strict";
 
+const deleteCat = require("./xhr");
 const catBtn = document.getElementById("catBtn");
+const messageBoard = document.getElementById("message-board");
 
 let catData = [];
 
 const catString = function (cats) {
   let catString = "";
   console.log(catData);
-  for (var i = 0; i < catData.length; i++) {
-    catString += `<div class="messageCard">
-                        <p id="message">${catData[i].cat}</p>
+  for (var i = 0; i < cats.length; i++) {
+    catString += `<div class="catCard">
+                        <p>${cats[i].cat}</p>
                         <button class="deleteBtn">Delete</button>
 									    </div > `;
-    writeToDom(catString);
+
   }
+  writeToDom(catString);
 };
 
 const writeToDom = function (strang) {
-  var messageContainer = document.getElementById("message-board");
+  const messageContainer = document.getElementById("message-board");
   messageContainer.innerHTML = strang;
 };
 
-
 catBtn.addEventListener("click", (event) => {
-  console.log(catData);
+  catString(catData);
 });
+
+const newMessage = (text) => {
+  catData.push({ "message": text });
+  catString(catData);
+  deleteCat.checkClearBtn(catData);
+};
+
+messageBoard.addEventListener("click", deleteCat.messageDelete());
 
 
 // Loads cat.json and writes it to the dom

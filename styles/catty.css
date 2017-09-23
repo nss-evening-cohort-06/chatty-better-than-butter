@@ -74,5 +74,5 @@ nav {
   overflow-x: hidden;
   overflow-y: scroll;
   border: 3px solid white;
- z-index: 1;
+  z-index: 1;
 }
