@@ -10,7 +10,6 @@ const clearBtn = document.getElementById("clear-messages");
 const messageDelete = (timestamp) => {
   console.log(messageData);
   for (let i = 0; i < messageData.length; i++) {
-    console.log(timestamp.length, messageData[i].timeStamp.length);
     if (messageData[i].timeStamp === timestamp) {
       messageData.splice(i, 1);
     }
