@@ -7,14 +7,22 @@ const clearBtn = document.getElementById("clear-messages");
 //when delete button is clicked, function loops through the messageData array
 //if that clicked deleteBtn parentNode message matches a message in the array
 //it deletes that message from the array
-const messageDelete = (message) => {
+const messageDelete = (timestamp) => {
   for (let i = 0; i < messageData.length; i++) {
-    if (messageData[i].message.indexOf(message) > -1) {
+    console.log(timestamp.length, messageData[i].timeStamp.length);
+    if (messageData[i].timeStamp === timestamp) {
       messageData.splice(i, 1);
     }
   }
   dom.domString(messageData);
   checkClearBtn(messageData);
+};
+
+const addCatsToMessage = (array) => {
+  for (var i = 0; i < array.length; i++) {
+    messageData.push(array[i]);
+  }
+  dom.domString(messageData);
 };
 
 // after every change in the dom run this to see if the clearBtn needs to be enabled or disabled...
@@ -36,7 +44,6 @@ const clearAll = () => {
 };
 
 var messageString = "";
-
 
 // push newly entered text from input into message array
 
@@ -65,5 +72,5 @@ messageRequest.addEventListener("error", messageError);
 messageRequest.open("GET", "../data/preloaded.json");
 messageRequest.send();
 
-module.exports = { messageLoad, messageError, messageDelete, newMessage, messageData, checkClearBtn, clearAll };
+module.exports = { messageLoad, messageError, messageDelete, newMessage, messageData, checkClearBtn, clearAll, addCatsToMessage };
 

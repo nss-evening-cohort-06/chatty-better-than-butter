@@ -1,40 +1,32 @@
 {
   "cats": [
     {
-      "cat": "meow"
+      "timeStamp": "Fri Sep 22 2017 11:51:59 GMT-0500 (CDT)",
+      "message": "meow"
     },
     {
-      "cat": "meow meow meow meow meow meow meow meow"
+      "timeStamp": "Fri Sep 22 2017 10:51:58 GMT-0500 (CDT)",
+      "message": "meow meow meow meow meow meow meow meow"
     },
     {
-      "cat": "url('https://i.pinimg.com/236x/78/2e/19/782e19a539df5566cc38984482b7fbf0--dog-halloween-costumes-dog-costumes.jpg')"
+      "timeStamp": "Fri Sep 22 2017 9:51:57 GMT-0500 (CDT)",
+      "message": "meouch!"
     },
     {
-      "cat": "url('https://previews.123rf.com/images/cole123rf/cole123rf1208/cole123rf120800007/14928601-dog-dressed-like-a-cat-english-bulldog-wearing-cat-costume-on-white-background-Stock-Photo.jpg')"
+      "timeStamp": "Fri Sep 22 2017 11:51:56 GMT-0500 (CDT)",
+      "message": "Did you know that 'meow' in Spanish is 'meow'? "
     },
     {
-      "cat": "meouch!"
+      "timeStamp": "Fri Sep 22 2017 1:51:55 GMT-0500 (CDT)",
+      "message": "meow meow HISSSSSSSSS!"
     },
     {
-      "cat": "url('http://inventorspot.com/files/images/hello_kitty.jpg')"
+      "timeStamp": "Fri Sep 22 2017 12:33:54 GMT-0500 (CDT)",
+      "message": "Hiss me with your best shot"
     },
     {
-      "cat": "Did you know that 'meow' in Spanish is 'meow'? "
-    },
-    {
-      "cat": "url('http://gph.is/1h4rZFE')"
-    },
-    {
-      "cat": "url('http://gph.is/2awnt8Q')"
-    },
-    {
-      "cat": "meow meow HISSSSSSSSS!"
-    },
-    {
-      "cat": "Hiss me with your best shot"
-    },
-    {
-      "cat": "You can call me...Kitty Purry."
+      "timeStamp": "Fri Sep 22 2017 12:44:53 GMT-0500 (CDT)",
+      "message": "You can call me...Kitty Purry."
     }
   ]
 }
