@@ -34,8 +34,18 @@ Using javascript, we created a "chat app" where the user can enter a message and
 
 
 ## Final Product
-<!-- gifs and quick explanations -->
+<!-- gifs? pics of our themes and quick explanations -->
 
+<!-- ![Normal](./images/Normal-theme-image.png "Normal theme")
+![Bob Ross](./images/Bob-Ross-theme-image.png "Bob Ross theme")
+![Catty](./images/Catty-theme-image.png "Catty theme")
+![Darth](./images/Darth-theme-image.png "Darth theme")
+![Magical](./images/Magical-theme-image.png "Magical theme") -->
+<img src="./images/Normal-theme-image.png" alt="Normal theme" width="250">
+<img src="./images/Bob-Ross-theme-image.png" alt="Bob Ross theme" width="250">
+<img src="./images/Catty-theme-image.png" alt="Catty theme" width="250">
+<img src="./images/Darth-theme-image.png" alt="Darth theme" width="250">
+<img src="./images/Magical-theme-image.png" alt="Magical theme" width="250">
 
 ## How to Run it
 <!-- I don't even know how to do this -->
