@@ -22,16 +22,16 @@ Using javascript, we created a "chat app" where the user can enter a message and
 ## Stetch Goals
 - [x] Additional themes
 - [x] Incorporate multiple JSON files
-- [ ] Emojis
+- [x] Emojis
 - [x] Timestamps on messages
 - [ ] Multiple users
 - [ ] Editing messages
-- [ ] Message limit
+- [x] Message limit
 
 ## Final Product
 
-A look at our 5 theme choices:
-<img src="./images/condensed-theme-image.png" alt="Our themes">
+A look at our 6 theme choices:
+<img src="./images/our-six-themes.png" alt="Our themes">
 
 ## How to Run it
 Must have Node installed
