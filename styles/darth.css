@@ -1,0 +1,74 @@
+body { 
+	padding-top: 80px; 
+  font-family: 'Source Code Pro', monospace;
+  background-image: url("https://i2.wp.com/techlogitic.net/wp-content/uploads/2015/11/2553_star_wars-1024x576.jpg");
+  background-position: center;
+  background-size: 110%;
+  background-repeat: no-repeat;
+}
+
+nav {
+	padding: 20px 20px 30px;
+	background-image: url("https://vignette1.wikia.nocookie.net/disney/images/b/ba/Death_Star-RO_U_Visual_Guide.png/revision/latest?cb=20170104184600");
+	background-position: top left;
+	background-size: 100px 100px;
+  background-repeat: no-repeat;
+}
+
+.navbar-brand {
+	padding-right: 0;	
+	padding-left: 100px; 	
+	font-size: 4.5em;
+	color: #000;
+}
+
+.navbar-form {
+	padding-left: 5px;
+  align-content: right;
+}
+
+#message-input, .btn {
+  height: 40px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 6px 20px;
+  text-decoration: none;
+  }
+
+#message-input, .btn, #message-board {
+  border: solid #C10D0D 1px; /*darth red*/
+  background: rgba(38, 38, 38, 0.8);  /*grey*/
+  color: #C10D0D;  /*darth red*/
+}
+
+#message-input {
+	min-width: 40vw;
+}
+
+.btn:hover {
+  background: #C10D0D; /*Darth Red*/
+  text-decoration: none;
+}
+
+.btn.active, .btn:focus, .btn:active, .btn:active:focus, .btn.active:focus {
+    background-color: #C10D0D; /*Darth Red*/
+}
+
+/*****MESSAGE BOARD STYLING*****/
+
+#message-board {
+  width: 90%;
+  padding: 24px;
+  margin: 2em auto;
+  height: 80vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/***** HIDE CAT BUTTON *****/
+
+.hidden-cat {
+  display: none;
+}

@@ -1,7 +1,6 @@
 "use strict";
 
 const messages = require("./xhr");
-
 const messageBoard = document.getElementById("message-board");
 const themeRadios = document.getElementById("radioThemes");
 const body = document.getElementById("body");
@@ -10,15 +9,15 @@ const clearBtn = document.getElementById("clear-messages");
 const stylesheets = {
   bob: "styles/bobRoss.css",
   catty: "styles/catty.css",
+  darth: "styles/darth.css",
+  magical: "styles/magical.css",
   normal: "styles/main.css"
 };
 
-
 //deleteBtn when clicked will find the parent "messageCard" and delete it.
-
 messageBoard.addEventListener("click", (e) => {
   if (e.target.className === "deleteBtn") {
-    messages.messageDelete(e.target.parentNode.children[1].innerHTML);
+    messages.messageDelete(e.target.parentNode.children[0].innerHTML);
   }
 });
 
@@ -44,4 +43,3 @@ input.addEventListener('keydown', (e) => {
     }
   }
 });
-
