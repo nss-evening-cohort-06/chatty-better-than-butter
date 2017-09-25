@@ -11,22 +11,17 @@ const domString = (messages) => {
                         <p class="timestamp">${messages[i].timeStamp}</p>
                         <p id="message">${messages[i].message}</p>
                         <button class="deleteBtn">Delete</button>
-
-									    </div > `;
-  }
-
-
-                      </div > `;
+									      </div > `;
     }
-    else{
-      messageString += `<div class="messageCard">
+      else{
+        messageString += `<div class="messageCard">
                           <p class="timestamp">${messages[i].timeStamp}</p>
                           <p id="message">${messages[i].message}</p>
                           <button class="deleteBtn">Delete</button>
-  									    </div > `;
+  									      </div > `;
       }
     }
-    messageString = emoji.parseEmoji(messageString);
+  messageString = emoji.parseEmoji(messageString);
   writeToDom(messageString);
 };
 
