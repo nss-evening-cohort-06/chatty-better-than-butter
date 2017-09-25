@@ -1,0 +1,79 @@
+body { 
+  padding-top: 250px;
+}
+
+nav {
+	padding: 20px 20px 20px;
+	background-image: url("http://www.pngmart.com/files/1/Glasses-Transparent-Background.png");
+	background-position: top;
+	background-size: 190px 80px;
+  background-repeat: no-repeat;
+}
+
+.navbar-brand {
+  margin: 7% 25% 2% 25%;
+	padding: 0 60px;
+	font-family: 'Shrikhand', cursive;
+	color: #606060;
+}
+
+.navbar p {
+  font-size: 10em;
+}
+
+.navbar-form {
+padding: 0 25%;
+}
+
+#message-input {
+	margin-bottom: 0.4%;
+	min-width: 50vw;
+}
+
+/*****MESSAGE BOARD STYLING*****/
+
+body {
+	background-color: antiquewhite;
+}
+
+#message-board {
+  width: 90%;
+  padding: 24px;
+  margin: 2em auto;
+  height: 60vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border: 2px solid lightgray;
+	border-radius: 10px;
+	background-color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.messageCard {
+	margin: 7px auto;
+	padding: 10px;
+	border-radius: 5px;
+	border: 2px solid #606060;
+	box-shadow: 2px 2px 5px #888888;
+	background-color: whitesmoke;
+}
+.messageCard p {
+	font-size: 4em;
+}
+.messageCard p:first-of-type {
+	font-size: 1.75em;
+}
+.timestamp {
+	font-size: 10px;
+}
+
+.deleteBtn {
+	display: inline-block;
+	font-size: 25px;
+}
+
+
+/*hides cat randomize button on main page*/
+.hidden-cat {
+	display: none;
+}
