@@ -11,6 +11,7 @@ const stylesheets = {
   catty: "styles/catty.css",
   darth: "styles/darth.css",
   magical: "styles/magical.css",
+  large: "styles/large.css",
   normal: "styles/main.css"
 };
 

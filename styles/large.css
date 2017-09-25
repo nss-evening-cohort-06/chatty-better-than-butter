@@ -1,29 +1,32 @@
-body {
-	padding-top: 80px;
+body { 
+  padding-top: 250px;
 }
 
 nav {
-	padding: 20px 20px 30px;
-	background-image: url("http://moziru.com/images/green-clipart-speech-bubble-17.png");
-	background-position: 5.5% 67%;
-	background-size: 200px 90px;
+	padding: 20px 20px 20px;
+	background-image: url("http://www.pngmart.com/files/1/Glasses-Transparent-Background.png");
+	background-position: top;
+	background-size: 190px 80px;
   background-repeat: no-repeat;
 }
 
 .navbar-brand {
-  	padding-right: 0;
-  	padding-left: 60px;
-  	font-family: 'Shrikhand', cursive;
-	font-size: 3em;
+  margin: 7% 25% 2% 25%;
+	padding: 0 60px;
+	font-family: 'Shrikhand', cursive;
 	color: #606060;
-	font-size: 3em;
+}
+
+.navbar p {
+  font-size: 10em;
 }
 
 .navbar-form {
-	padding-left: 50px;
+padding: 0 25%;
 }
 
 #message-input {
+	margin-bottom: 0.4%;
 	min-width: 50vw;
 }
 
@@ -37,7 +40,7 @@ body {
   width: 90%;
   padding: 24px;
   margin: 2em auto;
-  height: 80vh;
+  height: 60vh;
   overflow-x: hidden;
   overflow-y: scroll;
   border: 2px solid lightgray;
@@ -54,23 +57,23 @@ body {
 	box-shadow: 2px 2px 5px #888888;
 	background-color: whitesmoke;
 }
-
+.messageCard p {
+	font-size: 4em;
+}
+.messageCard p:first-of-type {
+	font-size: 1.75em;
+}
 .timestamp {
 	font-size: 10px;
 }
 
 .deleteBtn {
 	display: inline-block;
-	font-size: 10px;
+	font-size: 25px;
 }
 
 
 /*hides cat randomize button on main page*/
 .hidden-cat {
 	display: none;
-}
-
-/*emoji sizing*/
-.emoji {
-	max-width: 15px;
 }

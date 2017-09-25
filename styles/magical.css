@@ -77,3 +77,8 @@ nav {
   background-color: rgba(229, 226, 218, 0.8);
   color: black;
 }
+
+/*emoji sizing*/
+.emoji {
+	max-width: 15px;
+}

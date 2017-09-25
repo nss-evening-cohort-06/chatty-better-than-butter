@@ -3,11 +3,9 @@
 const dom = require("./dom");
 const clearBtn = document.getElementById("clear-messages");
 let messageData = [];
+let messageString = "";
 
-//when delete button is clicked, function loops through the messageData array
-//if that clicked deleteBtn parentNode message matches a message in the array
-//it deletes that message from the array
-
+//deletes message in array that matches the selected messages timestamp
 const messageDelete = (timestamp) => {
   for (let i = 0; i < messageData.length; i++) {
     if (messageData[i].timeStamp === timestamp) {
@@ -21,7 +19,9 @@ const messageDelete = (timestamp) => {
 const addCatsToMessage = (array) => {
   for (var i = 0; i < array.length; i++) {
     messageData.push(array[i]);
+    limitMessages(messageData);
   }
+  checkClearBtn(messageData);
   dom.domString(messageData);
 };
 
@@ -43,13 +43,18 @@ const clearAll = () => {
   checkClearBtn(messageData);
 };
 
-
-var messageString = "";
+// Needs to run whenever new messages are added. Eliminates the oldest message to make room for the new messages
+const limitMessages = (messages) => {
+  if (messages.length >= 20) {
+    messages.shift();
+  }
+};
 
 // push newly entered text from input into message array
 let newMessage = (text) => {
   let timeStamp = new Date();
   messageData.push({ "message": text, "timeStamp": `${timeStamp}` });
+  limitMessages(messageData);
   dom.domString(messageData);
   checkClearBtn(messageData);
 };
@@ -73,4 +78,3 @@ messageRequest.open("GET", "../data/preloaded.json");
 messageRequest.send();
 
 module.exports = { messageLoad, messageError, messageDelete, newMessage, messageData, checkClearBtn, clearAll, addCatsToMessage };
-
