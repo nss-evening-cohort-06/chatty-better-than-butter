@@ -1,7 +1,8 @@
 /*All colors are from the Bob Ross CSS collection... https://thomaspark.co/2015/11/bob-ross-color-palette-in-css/*/
 
-body { 
-	padding-top: 80px; 
+body {
+	padding-top: 80px;
+  font-family: 'Vibur', cursive;
   background-image: url("http://artist.com/art-recognition-and-education/wp-content/themes/artist-blog/media-files/2016/04/mountains-7.jpg");
   background-position: center;
   background-size: 100%;
@@ -18,8 +19,8 @@ nav {
 }
 
 .navbar-brand {
-  padding-right: 0;	
-  padding-left: 150px; 	
+  padding-right: 0;
+  padding-left: 150px;
 	font-size: 4.5em;
 	color: #5F2E1F; /*Dark Sienna*/
 }
@@ -122,3 +123,7 @@ nav .btn {
 .hidden-cat {
   display: none;
 }
+
+/*emoji sizing*/
+.emoji {
+	max-width: 15px;
