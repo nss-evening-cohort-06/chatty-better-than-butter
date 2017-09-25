@@ -16,6 +16,8 @@
 4. Create a button to clear all messages, if there are no messages, the button should be disabled
 5. Messages should be displayed with a "Delete" button after it
 6. Give the user one additional theme choice for the interface
+---
+Using javascript, we created a "chat app" where the user can enter a message and have it displayed to the main text area. We also focused on creating engaging themes for our users to choose from since we know there is no "one size fits all" chat app!
 
 ## Stetch Goals
 - [x] Additional themes
@@ -26,30 +28,27 @@
 - [ ] Editing messages
 - [ ] Message limit
 
-
-
-<!-- What we did short expo -->
-Using javascript, we created a "chat app" where the user can enter a message and have it displayed to the main text area. We also focused on creating engaging themes for our users to choose from since we know there is no "one size fits all" chat app!
-
-
-
 ## Final Product
-<!-- gifs and quick explanations -->
 
+A look at our 5 theme choices:
+<img src="./images/condensed-theme-image.png" alt="Our themes">
 
 ## How to Run it
-<!-- I don't even know how to do this -->
-cd lib/
-npm install?
-grunt
-open in browser
+Must have Node installed
+```
+git clone https://github.com/nss-evening-cohort-06/chatty-better-than-butter
+cd chatty-better-than-butter/lib/
+npm install
+cd ../
+npm install http-server -g
+http-server -p 8080
+```
 
-<!-- need links to git profiles -->
+This will show up in your browser at:
+`http://localhost:8080`
+
 ## Contributors: 
 [Jessica Brawner](https://github.com/lady-ace "lady-ace on Github")
 [Adam Smith](https://github.com/hagansmith "hagansmith on Github")
 [Amber Staurt](https://github.com/waamber "waamber on GitHub")
 [Alex Sanchez](https://github.com/alexsanchez728 "alexsanchez728 on Github")
-
-
-Check out the [simple wireframe](https://app.moqups.com/chortlehoort/uGBbLbK46Y/view/page/a3bd0c733) for this application on Moqups.com.
