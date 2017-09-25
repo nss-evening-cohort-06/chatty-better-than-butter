@@ -32,7 +32,9 @@ const writeToDom = (strang) => {
   let lastMessage = document.getElementById("lastMessage");
   const targetOffset = $('#lastMessage').offset();
   const divScrollTop = $('#message-board').scrollTop();
-  $('#message-board').scrollTop(divScrollTop + targetOffset.top - $('#lastMessage').height());
+  if (strang != "") {
+    $('#message-board').scrollTop(divScrollTop + targetOffset.top - $('#lastMessage').height());
+  }
 };
 
 module.exports = { domString, writeToDom };
