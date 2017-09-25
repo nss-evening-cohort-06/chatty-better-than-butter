@@ -29,7 +29,6 @@ nav {
 	min-width: 50vw;
 }
 
-
 .cat-clear, .cat-theme {
   background-image: url("https://littlecaesars.com/Portals/0/img/Promos/EMB/Mobile/Home_PizzaButton_Background_EMB_MobileSite.jpg");
   color: white;
@@ -52,6 +51,7 @@ nav {
 /*****MESSAGE BOARD STYLING*****/
 
 #message-board {
+  border-radius: 20px;
   background-color: white;
   width: 90%;
   padding: 24px;
@@ -66,6 +66,7 @@ nav {
 
 /*div to overlay messageboard for opacity*/
 .cat-container {
+  border-radius: 20px;
   opacity: 0.7;
   width: 90%;
   padding: 24px;
@@ -75,4 +76,23 @@ nav {
   overflow-y: scroll;
   border: 3px solid white;
   z-index: 1;
+}
+
+.messageCard {
+  font-family: 'Indie Flower', cursive;
+  font-size: 10px;
+  font-weight: bold;
+  margin: 20px;
+  padding: 15px;
+  border: 2px solid purple;
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px #888888;
+}
+
+#message {
+  font-size: 15px;
+}
+
+.deleteBtn {
+  border-radius: 10px;
 }
