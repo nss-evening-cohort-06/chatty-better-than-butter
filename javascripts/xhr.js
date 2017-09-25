@@ -21,6 +21,7 @@ const messageDelete = (timestamp) => {
 const addCatsToMessage = (array) => {
   for (var i = 0; i < array.length; i++) {
     messageData.push(array[i]);
+    limitMessages(messageData);
   }
   dom.domString(messageData);
 };
@@ -44,12 +45,20 @@ const clearAll = () => {
 };
 
 
+const limitMessages = (messages) => {
+  if (messages.length >= 20) {
+    messages.shift();
+  }
+};
+
+
 var messageString = "";
 
 // push newly entered text from input into message array
 let newMessage = (text) => {
   let timeStamp = new Date();
   messageData.push({ "message": text, "timeStamp": `${timeStamp}` });
+  limitMessages(messageData);
   dom.domString(messageData);
   checkClearBtn(messageData);
 };
