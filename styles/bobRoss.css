@@ -10,6 +10,7 @@ body {
 }
 
 nav {
+  font-family: 'Vibur', cursive;
 	padding: 20px 20px 30px;
 	background-image: url("https://static.giantbomb.com/uploads/scale_small/16/164924/2936747-0816877525-Bob_R.gif");
 	background-position: top left;
@@ -18,8 +19,8 @@ nav {
 }
 
 .navbar-brand {
-  	padding-right: 0;
-  	padding-left: 150px;
+  padding-right: 0;
+  padding-left: 150px;
 	font-size: 4.5em;
 	color: #5F2E1F; /*Dark Sienna*/
 }
@@ -30,6 +31,7 @@ nav {
 }
 
 #message-input {
+  font-family: 'Vibur', cursive;
 	min-width: 50vw;
   height: 40px;
   -webkit-border-radius: 5;
@@ -56,15 +58,32 @@ nav {
   text-decoration: none;
 }
 
+.btn:focus {
+  height: 40px;
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  color: #C79B00; /*Yellow Ochre*/
+  font-size: 18px;
+  background: #4E1500; /*Alizarin Crimson*/
+  padding: 10px 20px 10px 20px;
+  border: solid #FFEC00 1px; /*Cadmium Yellow*/
+}
+
 .btn:hover {
   background: #DB0000; /*Bright Red*/
   text-decoration: none;
+}
+
+nav .btn {
+  font-family: 'Vibur', cursive;
 }
 
 
 /*****MESSAGE BOARD STYLING*****/
 
 #message-board {
+  font-family: 'Vibur', cursive;
   width: 90%;
   padding: 24px;
   margin: 2em auto;
@@ -72,11 +91,39 @@ nav {
   overflow-x: hidden;
   overflow-y: scroll;
   border: 2px solid #FFEC00;
-  background-color: rgba(16, 46, 60, 0.8); /*Prussian Blue*/
+  background-color: rgba(16, 46, 60, 0.8); /*Phthalo Green*/
   color: #FFB800; /*Indian Yellow*/
+}
+
+.messageCard {
+  margin: 10px;
+  padding: 18px;
+  background-color: rgba(2, 30, 68, 0.8); /*Prussian Blue*/
+  border: solid #FFEC00 1px; /*Cadmium Yellow*/
+  border-radius: 5px;
+}
+
+#message {
+  font-size: 1.5em;
+}
+
+.deleteBtn {
+  justify-content: center;
+  height: 30px;
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  color: #C79B00; /*Yellow Ochre*/
+  font-size: 18px;
+  background: #4E1500; /*Alizarin Crimson*/
+  padding: 5px 20px 5px 20px;
+  border: solid #FFEC00 1px; /*Cadmium Yellow*/
+}
+
+.hidden-cat {
+  display: none;
 }
 
 /*emoji sizing*/
 .emoji {
 	max-width: 15px;
-}
