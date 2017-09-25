@@ -15,7 +15,7 @@ nav {
 	background-image: url("https://static.giantbomb.com/uploads/scale_small/16/164924/2936747-0816877525-Bob_R.gif");
 	background-position: top left;
 	background-size: 175px 90px;
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
 }
 
 .navbar-brand {
@@ -78,7 +78,6 @@ nav {
 nav .btn {
   font-family: 'Vibur', cursive;
 }
-
 
 /*****MESSAGE BOARD STYLING*****/
 

@@ -18,10 +18,11 @@ let emojies = {
 //Replace text between colons with emoji
 const parseEmoji = (messageString) => {
   for (let key in emojies) {
-        if (messageString.includes(key)) {
-          messageString = messageString.replace(key, emojies[key]);
-        }
+    if (messageString.includes(key)) {
+      messageString = messageString.replace(key, emojies[key]);
     }
-    return messageString;
+  }
+  return messageString;
 };
-module.exports = {parseEmoji};
+
+module.exports = { parseEmoji };

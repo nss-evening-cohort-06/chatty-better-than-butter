@@ -1,10 +1,12 @@
 "use strict";
+
 const catDom = require("./dom");
 const deleteCat = require("./xhr");
 const catBtn = document.getElementById("catBtn");
 const messageContainer = document.getElementById("message-board");
 let catData = [];
 
+//loads cat messages on "meow" button click
 catBtn.addEventListener("click", (event) => {
   catXHR();
 });
