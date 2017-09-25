@@ -1,7 +1,11 @@
 {
   "messages": [
     {
-      "timeStamp": "Fri Sep 22 2017 12:42:16 GMT-0500 (CDT)",
+      "timeStamp": "Fri Sep 22 2017 12:51:10 GMT-0500 (CDT)",
+      "message": "You can use emojies. Type ':keyword:' to display emoji. Options for the keyword include: love, hate, happy, sad tired, sick, angry, crazy."
+    },
+    {
+      "timeStamp": "Fri Sep 22 2017 12:51:14 GMT-0500 (CDT)",
       "message": "What up, fam!"
     },
     {

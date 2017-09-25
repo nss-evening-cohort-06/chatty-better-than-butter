@@ -1,5 +1,5 @@
-body { 
-	padding-top: 80px; 	
+body {
+	padding-top: 80px;
 }
 
 nav {
@@ -11,9 +11,9 @@ nav {
 }
 
 .navbar-brand {
-  padding-right: 0;	
-  padding-left: 60px;
-  font-family: 'Shrikhand', cursive;
+  	padding-right: 0;
+  	padding-left: 60px;
+  	font-family: 'Shrikhand', cursive;
 	font-size: 3em;
 	color: #606060;
 	font-size: 3em;
@@ -68,4 +68,9 @@ body {
 /*hides cat randomize button on main page*/
 .hidden-cat {
 	display: none;
+}
+
+/*emoji sizing*/
+.emoji {
+	max-width: 15px;
 }

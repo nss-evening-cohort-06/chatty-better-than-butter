@@ -1,6 +1,6 @@
-body { 
-  padding-top: 80px; 
-  background-image: url("https://i.pinimg.com/originals/f3/96/68/f3966861ae11e14f3f51ddbd62b37e4c.gif");	
+body {
+  padding-top: 80px;
+  background-image: url("https://i.pinimg.com/originals/f3/96/68/f3966861ae11e14f3f51ddbd62b37e4c.gif");
   background-size: cover;
 }
 
@@ -13,12 +13,12 @@ nav {
 }
 
 .navbar-brand {
-  padding-right: 0;	
+  padding-right: 0;
   padding-left: 196px;
   padding-top: 38px;
   font-family: 'Schoolbell', cursive;
 	font-size: 18px;
-	color: white; 
+	color: white;
 }
 
 .navbar-form {
@@ -61,7 +61,7 @@ nav {
   overflow-y: scroll;
   border: 3px solid white;
   font-family: 'Roboto', sans-serif;
- 
+
 }
 
 /*div to overlay messageboard for opacity*/
@@ -95,4 +95,9 @@ nav {
 
 .deleteBtn {
   border-radius: 10px;
+}
+
+/*emoji sizing*/
+.emoji {
+	max-width: 15px;
 }
