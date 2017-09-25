@@ -19,7 +19,7 @@
 ---
 Using javascript, we created a "chat app" where the user can enter a message and have it displayed to the main text area. We also focused on creating engaging themes for our users to choose from since we know there is no "one size fits all" chat app!
 
-## Stetch Goals
+## Stretch Goals
 - [x] Additional themes
 - [x] Incorporate multiple JSON files
 - [x] Emojis
@@ -31,17 +31,21 @@ Using javascript, we created a "chat app" where the user can enter a message and
 ## Final Product
 
 A look at our 6 theme choices:
-<img src="./images/our-six-themes.png" alt="Our themes">
+<img src="./images/our-six-final-themes.png" alt="Our themes">
 
 ## How to Run it
-Must have Node installed
+Must have Node installed first
 ```
-git clone https://github.com/nss-evening-cohort-06/chatty-better-than-butter
-cd chatty-better-than-butter/lib/
-npm install
-cd ../
-npm install http-server -g
-http-server -p 8080
+$ git clone https://github.com/nss-evening-cohort-06/chatty-better-than-butter
+$ cd chatty-better-than-butter/lib/
+$ npm install
+$ grunt
+```
+Then, in a seperate tab do the following
+```
+$ cd ../
+$ npm install http-server -g
+$ http-server -p 8080
 ```
 
 This will show up in your browser at:
