@@ -1,7 +1,6 @@
 "use strict";
 
 const domFile = require("./dom");
-console.log(domFile);
 
 let emojies = {
   ":love:": `<img src="../images/emoji/Love.png" class="emoji">`,

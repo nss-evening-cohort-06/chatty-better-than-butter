@@ -73,4 +73,3 @@ messageRequest.open("GET", "../data/preloaded.json");
 messageRequest.send();
 
 module.exports = { messageLoad, messageError, messageDelete, newMessage, messageData, checkClearBtn, clearAll, addCatsToMessage };
-
