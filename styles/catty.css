@@ -18,7 +18,7 @@ nav {
   padding-top: 38px;
   font-family: 'Schoolbell', cursive;
 	font-size: 18px;
-	color: white;
+	color: transparent;
 }
 
 .navbar-form {
@@ -26,7 +26,7 @@ nav {
 }
 
 #message-input {
-	min-width: 50vw;
+	min-width: 40vw;
 }
 
 .cat-clear, .cat-theme {
@@ -56,7 +56,7 @@ nav {
   width: 90%;
   padding: 24px;
   margin: 2em auto;
-  height: 80vh;
+  height: 75vh;
   overflow-x: hidden;
   overflow-y: scroll;
   border: 3px solid white;
