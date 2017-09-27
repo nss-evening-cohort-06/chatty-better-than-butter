@@ -35,7 +35,7 @@ themeRadios.addEventListener("change", (e) => {
 // event listener for input field
 input.focus();
 input.addEventListener('keydown', (e) => {
-  if (event.target.tagName != 'TEXTAREA') {
+  if (event.target.tagName != 'TEXTAREA' && event.target.value != "") {
     if (e.keyCode === 13) {
       event.preventDefault();
       messages.newMessage(input.value);
